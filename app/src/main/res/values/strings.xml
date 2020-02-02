@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">Front End User Interface</string>
+    <string name="app_name">Is It Recyclable?   Check and see…</string>
     <string name="name">Submit</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="recycle_code">Recycle Code</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="recyclegraphic">RecycleGraphic</string>
+    <string name="results">Results</string>
+    <string name="location">Location</string>
 </resources>

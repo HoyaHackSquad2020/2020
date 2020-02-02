@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/txtrecycle"
+        android:id="@+id/txtRecycleCpde"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -18,49 +18,37 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        android:text="Recyclable Code"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/recycle_code"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/cmdRecycleCode"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.189" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cmdRecycleCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:width="130dp"
         android:onClick="recyclecode"
-        android:text="@string/button_send"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtrecycle"
+        android:text="@string/recycle_code"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtRecycleCpde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtrecycle" />
+        app:layout_constraintStart_toEndOf="@+id/txtRecycleCpde" />
 
     <EditText
-        android:id="@+id/txtresult"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        android:text="Result Labeled"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="633dp" />
-
-    <EditText
-        android:id="@+id/txtzipcode"
+        android:id="@+id/txtZIPcode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -71,33 +59,37 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        android:text="Zipcode"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zip_code"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/cmdZIPcode"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cmdZIPcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:width="130dp"
         android:onClick="zipcode"
-        android:text="@string/button_send"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtzipcode"
+        android:text="@string/location"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtZIPcode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtzipcode" />
+        app:layout_constraintStart_toEndOf="@+id/txtZIPcode" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/cmdSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -110,9 +102,58 @@
         android:text="@string/button_send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="64dp"
+        android:contentDescription="@string/recyclegraphic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblResults"
+        app:srcCompat="@drawable/recycle" />
+
+    <EditText
+        android:id="@+id/lblResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:duplicateParentState="true"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:hint="@string/results"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F44336"
+        android:textColorHighlight="#F44336"
+        android:textColorHint="#009688"
+        android:textColorLink="#F44336"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmdSend" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
